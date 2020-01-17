@@ -7,11 +7,12 @@ FROM node:alpine
 WORKDIR /usr/app
 
 #Copy in files to the container
-COPY ./ ./
+COPY ./package.json ./
 
 #Install dependencies
 RUN npm install
 
+COPY ./ ./
 
 #Default command
 CMD [ "npm", "start" ]
