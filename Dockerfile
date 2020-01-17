@@ -2,8 +2,15 @@
 FROM node:alpine
 
 
+#workdir
+
+WORKDIR /usr/app
+
+#Copy in files to the container
+COPY ./ ./
+
 #Install dependencies
-RUN npm Install
+RUN npm install
 
 
 #Default command

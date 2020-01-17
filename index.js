@@ -3,7 +3,7 @@ let express = require("express");
 let app = express();
 
 app.get("/", (req, res) => {
-  res.status(200).send("Welcome to Node on Docker");
+  res.status(200).send("<h1>Node on Docker</h1>");
 });
 
 let port = process.env.PORT || 3000;
